@@ -1,0 +1,1100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Figtree-Bold";
+    src: url("../src/fonts/Figtree-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter-ExtraBold";
+    src: url("../src/fonts/Inter-ExtraBold.woff2") format("woff2"),
+        url("../src/fonts/Inter-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mulish-ExtraBold";
+    src: url("../src/fonts/Mulish-ExtraBold.woff2") format("woff2"),
+        url("../src/fonts/Mulish-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito-Regular";
+    src: url("../src/fonts/Nunito-Regular.woff2") format("woff2"),
+        url("../src/fonts/Nunito-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Nunito-Bold";
+    src: url("../src/fonts/Nunito-Bold.woff2") format("woff2"),
+        url("../src/fonts/Nunito-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("../src/fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("../src/fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "OpenSans-Medium";
+    src: url("../src/fonts/OpenSans-Medium.woff2") format("woff2"),
+        url("../src/fonts/OpenSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Quicksand-Medium";
+    src: url("../src/fonts/Quicksand-Medium.woff2") format("woff2"),
+        url("../src/fonts/Quicksand-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Quicksand-Bold";
+    src: url("../src/fonts/Quicksand-Bold.woff2") format("woff2"),
+        url("../src/fonts/Quicksand-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway-Medium";
+    src: url("../src/fonts/Raleway-Medium.woff2") format("woff2"),
+        url("../src/fonts/Raleway-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("../src/fonts/Raleway-Bold.woff2") format("woff2"),
+        url("../src/fonts/Raleway-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rota-Medium";
+    src: url("../src/fonts/Rota-Medium.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rota-Bold";
+    src: url("../src/fonts/Rota-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rota-ExtraBold";
+    src: url("../src/fonts/Rota-ExtraBold.woff2") format("woff2"),
+        url("../src/fonts/Rota-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Segoe-UI-Bold";
+    src: url("../src/fonts/SegoeUI-Bold.woff2") format("woff2"),
+        url("../src/fonts/SegoeUI-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Oswald-Medium";
+    src: url("../src/fonts/Oswald-Medium.woff2") format("woff2"),
+        url("../src/fonts/Oswald-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source-Sans-Medium";
+    src: url("../src/fonts/SourceSans3-Medium.woff2") format("woff2"),
+        url("../src/fonts/SourceSans3-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Source-Sans-Light";
+    src: url("../src/fonts/SourceSans3-Light.woff2") format("woff2"),
+        url("../src/fonts/SourceSans3-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@layer base {
+    :root {
+        --content-default-left-space: 90px;
+        --content-sidebar-open-left-space: 300px;
+        --header-height: 95px;
+
+        --color-tertiary: 207deg 26% 62%; /* used in input and data labels */
+        --color-tertiary-content: 0deg 0% 100%; /* used in icon inside input */
+
+        --color-btn-tertiary: 0deg 0% 100%;
+        --color-btn-tertiary-foreground: 207deg 15% 15%;
+        --color-btn-tertiary-hover: 210deg 40% 98%;
+
+        --color-accent: 207deg 38% 77%;
+        --color-accent-foreground: 0deg 0% 100%;
+
+        --color-neutral-focus: 0deg 0% 95%; /* used in hover color of btn-neutral */
+
+        --color-base-100: 210deg 40% 98%;
+        --color-base-200: 210deg 40% 96%;
+        --color-base-300: 212deg 71% 96%;
+        --color-base-400: 215deg 19% 58%; /* used in btn-ghost text color*/
+        --color-base-500: 206deg 25% 67%; /* used in settings tab text color */
+
+        --color-background: 212deg 71% 96%;
+        --color-foreground: 207deg 15% 15%;
+
+        --color-input-border: 207deg 38% 77%;
+        --color-input: 0deg 0 100%;
+
+        --color-header: 0deg 0% 100%;
+        --color-header-foreground: 0deg 0% 0%;
+
+        --color-card: 0deg 0% 100%;
+        --color-card-foreground: 0deg 0% 0%;
+
+        --color-sidebar: 247deg 49% 33%;
+        --color-sidebar-foreground: 241deg 25% 68%;
+
+        --color-dropdown: 0deg 0% 100%;
+        --color-dropdown-foreground: 215deg 19% 58%;
+
+        --color-modal: 0deg 0% 100%;
+        --color-modal-foreground: 215deg 19% 58%;
+
+        --color-thead: 210deg 40% 96%;
+
+        --color-tab-boxed: 209deg 30% 94%;
+        --color-tab-boxed-active: 0deg 0% 100%;
+
+        --font-primary: "Figtree-Bold", sans-serif;
+        --font-secondary: "Rota-Medium", sans-serif;
+        --font-tertiary: "Rota-Bold", sans-serif;
+    }
+
+    :root[data-theme="orange"]:not(.dark) {
+        --color-sidebar: 36deg 96% 59%;
+    }
+
+    :root[data-theme="violet"]:not(.dark) {
+        --color-sidebar: 266deg 75% 42%;
+    }
+
+    :root[data-theme="green"]:not(.dark) {
+        --color-sidebar: 126deg 78% 26%;
+    }
+
+    :root[data-theme="yellow"]:not(.dark) {
+        --color-sidebar: 47deg 100% 50%;
+    }
+
+    :root[data-theme="red"]:not(.dark) {
+        --color-sidebar: 0deg 90% 40%;
+    }
+
+    :root[data-theme="dark"],
+        html.dark {
+            --color-background: 244deg 19% 16%;
+            --color-foreground: 0deg 0% 100%;
+
+            /* --color-input-border: 230deg 20% 33%; */
+            --color-input-border: 229deg 20% 33%;
+            --color-input: 253deg 21% 13%;
+
+            --color-tertiary: 207deg 38% 77%;
+            --color-tertiary-content: 0deg 0% 100%;
+
+            --color-btn-tertiary: 230deg 24% 20%;
+            --color-btn-tertiary-foreground: 0deg 0% 100%;
+            --color-btn-tertiary-hover: 228deg 24% 25%;
+
+            --color-accent: 229deg 20% 33%;
+            --color-accent-foreground: 0deg 0% 100%;
+
+            /* --color-neutral-focus: 231deg, 21%, 35%; used in hover color of btn-neutral */
+            --color-neutral-focus: 231deg 21% 35%;
+
+            --color-base-100: 253deg 21% 13%;
+            --color-base-200: 229deg 20% 33%;
+            --color-base-300: 244deg 20% 16%;
+            --color-base-400: 215deg 19% 58%;
+            --color-base-500: 244deg 19% 16%;
+
+            --color-header: 244deg 19% 16%;
+            --color-header-foreground: 0deg 0% 100%;
+
+            --color-card: 230deg 24% 20%;
+            --color-card-foreground: 0deg 0% 100%;
+
+            --color-sidebar: 230deg 24% 20%;
+            --color-sidebar-foreground: 231deg 6% 52%;
+
+            --color-dropdown: 231deg 21% 26%;
+            --color-dropdown-foreground: 215deg 19% 58%;
+
+            --color-modal: 231deg 21% 26%;
+            --color-modal-foreground: 215deg 19% 58%;
+
+            --color-side-tab-foreground: 0deg 0% 100%;
+
+            --color-thead: 230deg 21% 26%;
+
+            --color-tab-boxed: 244deg 19% 16%;
+            --color-tab-boxed-active: 229deg 20% 33%;
+        }
+
+        html.dark[data-theme="blue"] {
+            --p: 0.713576 0.151856 236.20411;
+        }
+
+/************************************************************
+    DATA FONTS
+************************************************************/
+
+    :root[data-font="figtree-rota"] {
+        --font-primary: "Figtree-Bold", sans-serif;
+        --font-secondary: "Rota-Medium", sans-serif;
+        --font-tertiary: "Rota-Bold", sans-serif;
+    }
+
+    :root[data-font="segoe-nunito"] {
+        --font-primary: "Segoe-UI-Bold", sans-serif;
+        --font-secondary: "Nunito-Regular", sans-serif;
+        --font-tertiary: "Nunito-Bold", sans-serif;
+    }
+
+    :root[data-font="inter-quicksand"] {
+        --font-primary: "Inter-Extrabold", sans-serif;
+        --font-secondary: "Quicksand-Medium", sans-serif;
+        --font-tertiary: "Quicksand-Bold", sans-serif;
+    }
+
+    :root[data-font="rota-opensans"] {
+        --font-primary: "Rota-ExtraBold", sans-serif;
+        --font-secondary: "OpenSans-Regular", sans-serif;
+        --font-tertiary: "OpenSans-Medium", sans-serif;
+    }
+
+    :root[data-font="mulish-raleway"] {
+        --font-primary: "Mulish-ExtraBold", sans-serif;
+        --font-secondary: "Raleway-Medium", sans-serif;
+        --font-tertiary: "Raleway-Bold", sans-serif;
+    }
+
+    :root[data-font="oswald-source-sans"] {
+        --font-primary: "Oswald-Medium", sans-serif;
+        --font-secondary: "Source-Sans-Light", sans-serif;
+        --font-tertiary: "Source-Sans-Medium", sans-serif;
+    }
+
+    :root,
+        html {
+            @apply bg-transparent;
+        }
+
+        html, body {
+            @apply h-full bg-white;
+        }
+
+/************************************************************
+    Set your base color & font for body here:
+************************************************************/
+    * {
+        @apply text-foreground font-secondary accent-primary selection:bg-primary selection:text-primary-content;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-primary;
+    }
+
+    i {
+        @apply text-inherit;
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        @apply h-[2px] md:h-[8px] w-[8px];
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        @apply rounded-lg bg-transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        @apply rounded-lg bg-slate-300;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-slate-400;
+    }
+
+/************************************************************
+    ION ICONS
+************************************************************/
+    ion-icon {
+        @apply -mt-0.5;
+    }
+
+/************************************************************
+    BACKGROUNDS
+************************************************************/
+    .bg-vector svg {
+        @apply absolute top-0 w-[512px] object-contain;
+    }
+
+    .bg-vector--left svg {
+        @apply left-0;
+    }
+
+    .bg-vector--right svg {
+        @apply right-0 -scale-x-100;
+    }
+}
+
+@layer components {
+/************************************************************
+    DESKTOP SIDEBAR MENU
+************************************************************/
+    .ds-menu {
+        @apply [&_*]:text-white/90 [&_*]:text-base [&_*]:hover:text-white/90;
+    }
+
+    .ds-menu .menu__link {
+        @apply px-0 py-3 items-center gap-2;
+    }
+
+    .ds-menu .submenu__title {
+        @apply pl-0 pr-7 py-3 items-center gap-2;
+    }
+
+    .ds-menu .menu__icon {
+        @apply shrink-0 group-hover:!text-secondary;
+    }
+
+    .ds-menu .menu__link:active,
+    .ds-menu .menu__link:hover,
+    .ds-menu .submenu__title:active,
+    .ds-menu .submenu__title:hover,
+    .ds-menu :where(.menu__item > .submenu[open] > .submenu__title),
+    .ds-menu
+    .menu__item
+        > *:not(ul):not(.ds-menu-title):not(.submenu-group):active {
+        @apply bg-transparent !text-white [&_*]:!text-white;
+    }
+
+    /* .ds-menu .menu__link *,
+    .ds-menu .submenu__title * {
+    @apply dark:!text-white/100;
+    } */
+
+    .ds-menu .menu__link,
+    .ds-menu .submenu__title {
+        @apply hover:text-white;
+    }
+
+    .ds-menu .menu__link:hover .menu__icon,
+    .ds-menu .submenu__title:hover .menu__icon {
+        @apply text-secondary;
+    }
+
+    .ds-menu :where(.menu__item > .submenu-group > .submenu__title):after {
+        @apply absolute right-3 text-white;
+    }
+
+    .ds-menu .submenu__list {
+        @apply ml-[0.25rem] pl-[1rem];
+    }
+
+    .ds-menu .submenu__list:before {
+        @apply bg-tertiary/40;
+    }
+
+    .ds-menu .submenu__list .menu__link {
+        @apply py-1;
+    }
+
+/************************************************************
+    SIDEBAR - DEFAULT / WHEN CLOSED
+************************************************************/
+    .sidebar-menu {
+        @apply w-[70px] max-w-[70px];
+    }
+
+    .sidebar-menu .submenu-group {
+        @apply pointer-events-none;
+    }
+
+    .sidebar-menu .menu__title {
+        @apply invisible whitespace-nowrap;
+    }
+
+/************************************************************
+    SIDEBAR - OPEN
+************************************************************/
+
+    .sidebar-menu.open {
+        @apply w-full max-w-[280px] [&_*]:pointer-events-auto;
+    }
+    .sidebar-menu.open .menu__title {
+        @apply visible whitespace-normal;
+    }
+
+/************************************************************
+    ACCORDIONS / COLLAPSE
+************************************************************/
+
+    .ds-collapse-arrow--primary .ds-collapse-title:before {
+        @apply content-[''] absolute top-4 right-6;
+    }
+    .ds-collapse-arrow--primary .ds-collapse-title:after {
+        @apply text-white;
+    inset-inline-end: 2.25rem;
+    }
+    .ds-collapse-plus--primary .ds-collapse-title:after,
+    .ds-collapse-arrow--primary .ds-collapse-title:before {
+        @apply inline-flex justify-center items-center w-7 h-7 aspect-square rounded-full bg-primary text-white;
+    }
+
+/************************************************************
+    ALERTS
+************************************************************/
+    .ds-alert {
+        @apply flex rounded-lg border-opacity-100 shadow-main;
+    }
+    .ds-alert-info {
+        @apply border-info [&:not(.ds-alert-outline)_*]:text-info-content;
+    }
+    .ds-alert-success {
+        @apply border-success [&:not(.ds-alert-outline)_*]:text-success-content;
+    }
+    .ds-alert-warning {
+        @apply border-warning [&:not(.ds-alert-outline)_*]:text-warning-content;
+    }
+    .ds-alert-error {
+        @apply border-error [&:not(.ds-alert-outline)_*]:text-error-content;
+    }
+
+    .ds-alert-outline {
+        @apply bg-card;
+    }
+
+    .ds-alert .alert-close {
+        @apply aspect-square rounded-full px-[unset] py-1 mt-0 absolute top-1 right-1 bg-transparent !border-none !text-base-400 cursor-pointer hover:text-neutral-content hover:bg-base-400/5 dark:hover:bg-dark-bg-5 dark:!text-white;
+    }
+
+    .ds-alert-filled :is(.alert-close) {
+        @apply hover:!bg-white/20 dark:hover:!bg-white/25;
+    }
+
+/************************************************************
+    BUTTONS
+************************************************************/
+    .ds-btn {
+        @apply py-1 text-white [&_*]:text-inherit normal-case font-tertiary;
+    }
+
+    .ds-btn:not(:where(.ds-btn-xs, .ds-btn-sm, .ds-btn-md, .ds-btn-lg)) {
+        @apply min-h-[3rem] h-fit;
+    }
+
+    .ds-btn-primary {
+        @apply border-none bg-primary;
+    }
+
+    .ds-btn-secondary {
+        @apply border-none bg-secondary;
+    }
+
+    .ds-btn-accent {
+        @apply bg-accent outline-none !border-accent;
+    }
+
+    .ds-btn-light {
+        @apply bg-white text-primary shadow-btn border-none outline-none hover:bg-base-400/[0.05] dark:hover:bg-white/90;
+    }
+
+    .ds-btn-tertiary {
+        @apply border-none bg-btn-tertiary hover:bg-btn-tertiary-hover text-btn-tertiary-foreground [&_*]:text-btn-tertiary-foreground shadow-btn-2;
+    }
+
+    .ds-btn-neutral {
+        @apply text-neutral-content hover:bg-neutral-focus !border-transparent dark:hover:!bg-base-200;
+    }
+
+    .ds-btn-ghost {
+        @apply border-2 border-solid border-transparent text-base-400 hover:bg-neutral hover:text-neutral-content hover:bg-base-400/5 hover:border-base-400/[0.2] dark:hover:bg-dark-bg-5 dark:hover:text-white;
+    }
+
+    .ds-btn-outline {
+        @apply bg-transparent font-tertiary text-base-400 border border-solid border-base-400/[0.2] hover:bg-base-400/[0.05] hover:border-base-400/[0.2] hover:text-base-400;
+    }
+
+    .ds-btn-outline.ds-btn-active {
+        @apply bg-primary border-primary !text-white;
+    }
+
+    .ds-btn-circle {
+        @apply aspect-square;
+    }
+
+    .ds-btn .icon {
+        @apply text-inherit;
+    }
+
+    /* SEMANTIC */
+    .ds-btn-error-light {
+        @apply bg-error/10 text-error !border-transparent hover:bg-error/20;
+    }
+
+/************************************************************
+    BREADCRUMBS
+************************************************************/
+
+    .ds-breadcrumbs > ul > li + *:before,
+    .ds-breadcrumbs > ol > li + *:before {
+        @apply content-["/"] border-none transform-none w-[unset] h-[unset] text-foreground;
+    }
+
+    .ds-breadcrumbs > :is(ul, ol) > li:last-child {
+        @apply text-secondary;
+    }
+
+/************************************************************
+    FORMS, INPUTS
+************************************************************/
+
+    .ds-label-text {
+        @apply font-tertiary text-tertiary text-base;
+    }
+
+    .ds-input,
+    .ds-textarea-bordered,
+    .ds-select,
+    .ds-file-input,
+    .select2-container--default .select2-selection--single,
+    .select2-container--default .select2-search--dropdown .select2-search__field,
+    .select2-container--default .select2-selection--multiple {
+        @apply h-[3rem] bg-input border-none outline outline-2 outline-input-border -outline-offset-2 text-base focus:-outline-offset-2 focus:bg-input-border/10 transition-all placeholder:text-accent focus:outline-primary disabled:bg-input-border/20 disabled:text-accent disabled:placeholder:text-accent;
+    }
+
+    .ds-select option {
+        @apply bg-base-200;
+    }
+
+    /***** select2 input *****/
+    span.select2-selection.select2-selection--single,
+    .select2-container .select2-selection--single,
+    .select2-container--default .select2-selection--multiple {
+        @apply !flex !items-center !min-h-[3rem] px-2 !rounded-lg !bg-input;
+    }
+    /***** select2 input : dark *****/
+    /* html.dark
+    :is(
+        span.select2-selection.select2-selection--single,
+        .select2-container .select2-selection--single,
+        .select2-container--default .select2-selection--multiple
+        ) {
+    @apply !bg-input;
+    } */
+
+    /***** select2 selected text ******/
+    .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+        @apply !text-foreground;
+    }
+
+  /*****  search input inside select2 *****/
+    .select2-container--default .select2-search--dropdown .select2-search__field {
+        @apply rounded;
+    }
+
+  /*****  select2 dropdown arrow icon *****/
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    @apply !top-1/2 -translate-y-1/2 !right-2;
+  }
+
+  /***** select2 dropdown *****/
+  .select2-dropdown {
+    @apply !bg-dropdown !border-none shadow-main !mt-2 !p-3;
+  }
+
+  /***** select2 selected option *****/
+  .select2-container--default .select2-results__option--selected {
+    @apply !bg-base-300;
+  }
+
+  /***** select2 option onHover *****/
+  .select2-container--default
+    .select2-results__option--highlighted.select2-results__option--selectable {
+    @apply !bg-primary !text-primary-content;
+  }
+
+  /***** select2 multiple input onFocus *****/
+  .select2-container--default.select2-container--focus
+    .select2-selection--multiple {
+    @apply !border-none !outline !outline-2 !outline-primary -outline-offset-2;
+  }
+
+  /***** select2 multiple selected option tag *****/
+  .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice {
+    @apply !border-none !bg-base-200 !py-1 !pl-6 !pr-1;
+  }
+  /***** select2 multiple selected option tag X button *****/
+  .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__remove {
+    @apply !border-r-0 !w-[26px] h-full flex items-center justify-center;
+  }
+
+  .select2-container--default
+    .select2-selection--multiple
+    .select2-selection__choice__remove
+    > span {
+    @apply pt-1 pl-0.5 font-secondary font-normal text-2xl text-primary;
+  }
+
+  .ds-input-error {
+    @apply outline-error focus:outline-error;
+  }
+
+  .ds-input-success {
+    @apply outline-success focus:outline-success;
+  }
+
+  .ds-checkbox,
+  .ds-radio {
+    @apply disabled:border-tertiary disabled:!bg-accent;
+  }
+
+  .ds-checkbox-primary,
+  .ds-radio-primary {
+    @apply border-accent hover:border-primary;
+  }
+
+  .ds-checkbox {
+    @apply [--chkfg:white];
+  }
+
+  .ds-radio {
+    @apply transition-all checked:border-8 checked:bg-white;
+  }
+
+  input[type="file"].no-btn {
+    @apply pt-[3.72%];
+  }
+
+  input[type="file"].no-btn::file-selector-button {
+    @apply hidden;
+  }
+
+  .ds-file-input:focus::file-selector-button {
+    @apply bg-primary;
+  }
+
+  .ds-file-input-accent::file-selector-button {
+    @apply bg-accent border-accent text-white;
+  }
+
+  /* .ds-range {
+    background-color: var(--a);
+  } */
+  .ds-range::-webkit-slider-runnable-track {
+    @apply bg-accent/50;
+  }
+
+  .dropify-wrapper {
+    @apply !rounded-md !border-dashed !border-accent shadow-main !bg-transparent;
+  }
+
+  .dropify-wrapper .dropify-message p {
+    @apply !text-base !text-foreground;
+  }
+
+  .dropify-wrapper .dropify-message span.file-icon {
+    @apply !text-accent;
+  }
+
+  .dropify-wrapper.disabled {
+    @apply !bg-base-200;
+  }
+
+  html.dark .dropify-wrapper:hover {
+    @apply bg-dark-dropify-hover;
+  }
+
+  /************************************************************
+  TABLES
+************************************************************/
+  .ds-table :where(th) {
+    @apply uppercase text-base-400 text-sm font-primary py-2;
+  }
+
+  .ds-table :where(td) {
+    @apply font-tertiary py-2;
+  }
+
+  .ds-table :where(.ds-table-pin-cols tr th) {
+    /* should be the same with the color of table / default bg of row */
+    @apply bg-card;
+  }
+
+  .ds-table tr.ds-active,
+  .ds-table tr.ds-active:nth-child(even),
+  .ds-table-zebra tbody tr:nth-child(even),
+  .ds-table-zebra tbody tr:nth-child(even) :where(.ds-table-pin-cols tr th) {
+    @apply bg-base-100 dark:bg-dark-light-blue-highlight;
+  }
+
+  .ds-table :where(thead, tbody) :where(tr:not(:last-child)),
+  .ds-table :where(thead, tbody) :where(tr:first-child:last-child) {
+    @apply border-b-accent dark:border-b-dark-light-gray;
+  }
+
+  .ds-table :where(thead) th {
+    @apply bg-thead;
+  }
+
+  /***  Table - Editable ***/
+
+  .table--editable :where(tr) {
+    @apply !border-0;
+  }
+
+  .table--editable :where(td) {
+    @apply !p-0;
+  }
+
+  .table--editable :where(td) :is(.ds-input, input, .ds-select, select) {
+    @apply w-full block !outline-0 rounded-none !border !border-solid !border-accent/40 focus:!border-primary focus:bg-base-100 dark:focus:bg-dark-light-blue-highlight;
+  }
+
+  /************************************************************
+  TOGGLE
+************************************************************/
+  .ds-toggle {
+    @apply hover:opacity-75 dark:checked:!border-none dark:!shadow-[var(--handleoffsetcalculator)_0_0_2px_white_inset,_0_0_0_2px_white_inset,_var(--togglehandleborder)];
+  }
+
+  .ds-toggle-primary {
+    @apply !bg-primary border-primary;
+  }
+  .ds-toggle-primary:checked {
+    @apply [--tglbg:oklch(var(--su))] !bg-white;
+  }
+
+  .ds-toggle-info {
+    @apply !bg-info border-info;
+  }
+  .ds-toggle-info:checked {
+    @apply [--tglbg:oklch(var(--in))] !bg-white border-info;
+  }
+
+  .ds-toggle-warning {
+    @apply !bg-warning border-warning;
+  }
+  .ds-toggle-warning:checked {
+    @apply [--tglbg:oklch(var(--wa))] !bg-white border-warning;
+  }
+
+  .ds-toggle-success {
+    @apply !bg-success border-success;
+  }
+  .ds-toggle-success:checked {
+    @apply [--tglbg:oklch(var(--su))] !bg-white border-success;
+  }
+
+  .ds-toggle-error {
+    @apply !bg-error border-error;
+  }
+  .ds-toggle-error:checked {
+    @apply [--tglbg:oklch(var(--er))] !bg-white border-error;
+  }
+
+  /************************************************************
+  SEARCH BAR
+************************************************************/
+  .ct-search,
+  .ct-search * {
+    @apply transition-all ease-in-out;
+  }
+
+  /* expand search bar */
+  .ct-search--collapsed.open input,
+  .ct-search--collapsed input:valid {
+    @apply bg-white w-[400px] pr-[80px] dark:bg-dark-bg-1;
+  }
+
+  .ct-search--collapsed.open .ct-search__submit,
+  .ct-search--collapsed input:valid ~ .ct-search__submit {
+    @apply bg-primary text-primary-content hover:bg-primary;
+  }
+
+  .ct-search--collapsed.open .ct-search__toggle {
+    @apply hidden;
+  }
+
+  .ct-search--collapsed.open .ct-search__submit {
+    @apply !flex;
+  }
+
+  /* when input is active/focused */
+  /* .ct-search input:focus ~ .ct-search__submit {
+    @apply rotate-0;
+  } */
+
+  .ct-search input:valid ~ .ct-search__clear {
+    @apply flex;
+  }
+
+  /************************************************************
+  PROGRESS BAR
+************************************************************/
+  .ds-progress {
+    @apply bg-accent/50;
+  }
+
+  /************************************************************
+  STEPPER
+************************************************************/
+  .ds-steps .ds-step {
+    @apply font-tertiary text-xs text-accent;
+  }
+
+  .ds-steps .ds-step:before {
+    @apply h-[0.1rem];
+  }
+
+  .ds-steps .ds-step:after {
+    @apply bg-accent text-white;
+  }
+
+  .ds-steps .ds-step.ds-step-primary {
+    @apply text-foreground;
+  }
+  .ds-steps .ds-step.ds-step-primary:after {
+    @apply bg-primary text-primary-content;
+  }
+
+  /*  CUSTOM */
+  .ds-steps--block {
+    @apply flex flex-col md:flex-row;
+  }
+  .ds-steps--block .ds-step {
+    @apply relative flex flex-col items-start flex-auto text-left bg-accent/20 py-4 px-2 pl-14 [&_*]:text-tertiary first:rounded-l last:rounded-r;
+  }
+
+  .ds-steps--block .ds-step:before {
+    @apply hidden;
+  }
+
+  .ds-steps--block .ds-step:after {
+    @apply absolute left-[12px] top-1/2 -translate-y-1/2;
+  }
+
+  .ds-steps--block .ds-step.ds-step-primary {
+    @apply bg-primary [&_*]:text-primary-content;
+  }
+
+  .ds-steps--block .ds-step.ds-step-primary:after {
+    @apply bg-white text-primary;
+  }
+
+  /************************************************************
+  BADGE
+************************************************************/
+  .ds-badge {
+    @apply font-primary text-white;
+  }
+
+  .status.ds-badge {
+    @apply bg-black/[0.14] text-black;
+  }
+
+  .status.ds-badge-info {
+    @apply h-fit px-2.5 py-1 items-center bg-info/[0.14] text-info [&_*]:text-info;
+  }
+
+  .status.ds-badge-warning {
+    @apply h-fit px-2.5 py-1 items-center bg-warning/[0.14] text-warning [&_*]:text-warning;
+  }
+
+  .status.ds-badge-success {
+    @apply h-fit px-2.5 py-1 items-center bg-success/[0.14] text-success [&_*]:text-success;
+  }
+
+  .status.ds-badge-error {
+    @apply h-fit px-2.5 py-1 items-center bg-error/[0.14] text-error [&_*]:text-error;
+  }
+
+  /************************************************************
+  TABS
+************************************************************/
+  .ds-tab {
+    @apply font-tertiary text-slate-400/50 h-fit dark:text-dark-light-gray;
+  }
+
+  .ds-tab:is(input[type="radio"]) {
+    @apply border-b-2 border-transparent;
+  }
+  .ds-tab:is(input[type="radio"]):after {
+    @apply text-accent;
+  }
+
+  .ds-tab.ds-tab-active:not(.ds-tab-disabled):not([disabled]) {
+    @apply !bg-transparent border-b-2 border-b-primary;
+  }
+
+  .ds-tab.ds-tab-active:not(.ds-tab-disabled):not([disabled]):is(
+      input[type="radio"]
+    ):after {
+    @apply text-primary;
+  }
+
+  .ds-tab.ds-tab-active:not(.ds-tab-disabled):not([disabled]),
+  .ds-tab:is(input:checked) {
+    @apply border-primary after:text-primary;
+  }
+
+  /************************************************************
+  TABS : MOD
+************************************************************/
+
+  .ds-tabs-bordered > .ds-tab {
+    @apply border-neutral-content;
+  }
+
+  .ds-tabs-boxed {
+    @apply bg-tab-boxed;
+  }
+
+  .ds-tabs-boxed .ds-tab.ds-tab-active:not(.ds-tab-disabled):not([disabled]) {
+    @apply !bg-tab-boxed-active text-foreground !border-none;
+  }
+
+  /************************************************************
+  TABS : SETTINGS
+************************************************************/
+
+  .settings__tab {
+    @apply px-4 py-3 bg-transparent rounded-full font-tertiary text-tertiary text-sm whitespace-nowrap transition-all md:whitespace-normal hover:bg-tertiary/[0.05] lg:text-base;
+  }
+
+  .settings__tab.active {
+    @apply bg-tertiary/[0.05] text-primary;
+  }
+
+  /************************************************************
+  TOOLTIP
+************************************************************/
+  .ds-tooltip-light:before {
+    @apply bg-white shadow-md;
+  }
+
+  .ds-tooltip-light:after {
+    @apply border-transparent border-t-white;
+  }
+
+  /************************************************************
+ MODALS
+************************************************************/
+
+  .ds-rModal {
+    @apply fixed inset-0 z-[2000] bg-black/40 flex items-center justify-center
+  }
+}
+
+@layer utilities {
+  .font-inherit {
+    font: inherit;
+  }
+
+  .wrapper-zebra > div {
+    @apply bg-card border-b border-b-accent dark:border-b-dark-light-gray;
+  }
+  .wrapper-zebra > div:nth-child(even) {
+    @apply bg-base-100 dark:bg-dark-light-blue-highlight;
+  }
+}
+
+/************************************************************
+  CONTENT WHEN SIDEBAR IS OPEN
+************************************************************/
+main {
+  @apply lg:ml-[var(--content-default-left-space)];
+}
+
+header {
+  @apply lg:pl-[var(--content-default-left-space)];
+}
+
+.sidebar-open main {
+  @apply lg:ml-[var(--content-sidebar-open-left-space)]; /* max-width of sidebar nav + 20px for spacing */
+}
+
+.sidebar-open header {
+  @apply lg:pl-[var(--content-sidebar-open-left-space)];
+}
+
+/************************************************************
+  PLUGINS : SELECT2
+************************************************************/
+/* .select2-container--default .select2-selection--single {
+  @apply .ds-input;
+} */
